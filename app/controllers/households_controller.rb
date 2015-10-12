@@ -1,7 +1,18 @@
 class HouseholdsController < ApplicationController
-  def index
 
-  end
+def index
+@households = Household.all
+@geojson = Household.geojson
+
+   respond_to do |format|
+    format.html
+    format.json { render json: @geojson }
+   end
+
+
+end
+
+
 
   def find_household
     @household = get_house_via_code

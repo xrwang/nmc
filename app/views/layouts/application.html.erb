@@ -2,13 +2,21 @@
 <html>
 <head>
   <title>Nomadic Mapping Collective</title>
+
+  <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
 
+  <header class="header">
 
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -20,7 +28,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="/">Nomadic Mapping Collective</a>
+            <a class="navbar-brand page-scroll" href="/">NMC</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,23 +36,25 @@
 
             <ul class="nav navbar-nav navbar-right">
               <li>
-                  <a class="page-scroll" href="/">Home</a>
+                  <a class="page-scroll" href="/static_pages/home">Home</a>
               </li>
 
               <li>
                   <a class="page-scroll" href="/households/index">Find a Dataset</a>
               </li>
               <li>
-                  <a class="page-scroll" href="/">Documentation</a>
+                  <a class="page-scroll" href="/static_pages/resources">Resources</a>
               </li>
               <li>
-                  <a class="page-scroll" href="/">About</a>
+                  <a class="page-scroll" href="/static_pages/about">About</a>
               </li>
 
               <% if admin_signed_in? %>
-              <li>
-              <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>
-              </li>
+
+                <li><%= link_to('See all Data', static_pages_index_path)%></li>
+
+                <li><%= link_to('Logout', destroy_admin_session_path, :method => :delete) %></li>
+
               <% else %>
               <li>
               <%= link_to('Login as Admin', new_admin_session_path)  %>
@@ -60,6 +70,7 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+</header>
 
 
 <% if notice %>
@@ -69,7 +80,7 @@
 <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
-
+<%= yield :head %>
 
 <%= yield %>
 

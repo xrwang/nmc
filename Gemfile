@@ -32,8 +32,9 @@ gem 'httparty'
 #devise for general auth
 gem 'devise'
 
-
-
+#geocoder for locations
+gem 'geocoder'
+gem 'mapbox-rails'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc

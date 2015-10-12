@@ -1,4 +1,33 @@
 <section id="page-top">
 <h1>StaticPages#index</h1>
 <p>Find me in app/views/static_pages/index.html.erb</p>
+<%=@households.each do |household|%>
+<ul class = "list-unstyled">
+<li><h4>Nickname:</h4> <%=household.nickname%></li>
+<br>
+<li><h4>Longitude:</h4>  <%=household.long%></li>
+<br>
+
+<li><h4>Latitude:</h4>  <%=household.lat%></li>
+<br>
+
+<li><h4>Unique Hash:</h4>  <%=household.code%></li>
+<br>
+
+<li><h4>Country:</h4>  <%=household.country%></li>
+<br>
+
+<li><h4>Image:</h4> <%=household.image%></li>
+<br>
+
+<li><h4>Spherecast URL for <a href="https://www.google.com/get/cardboard/" target="_blank">Cardboard</a></h4> <%=household.vr_url%></li>
+<br>
+
+<li><h4>PDF url:</h4> <%=household.pdf_url%></li>
+<br>
+
+<li><h4>Last updated:</h4>  <%=household.updated_at%></li>
+<br>
+
+  <%end%>
 </section>

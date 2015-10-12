@@ -14,7 +14,12 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
-  get 'admin' => 'admin#home'
+  get 'static_pages/resources'
+  get 'static_pages/about'
+
+
+
+  get 'admin' => 'static_pages#index'
   root 'static_pages#index'
 
   resources :households

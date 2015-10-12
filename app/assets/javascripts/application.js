@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
+//= require mapbox.js
 //= require turbolinks
 //= require_tree .
+//= require map

@@ -79,6 +79,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     font-awesome-sass (4.4.0)
       sass (>= 3.2)
+    geocoder (1.2.11)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.2)
@@ -99,6 +100,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mapbox-rails (1.6.1.1)
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_portile (0.6.2)
@@ -215,9 +217,11 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-sass (~> 4.4.0)
+  geocoder
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  mapbox-rails
   omniauth
   omniauth-facebook (~> 2.0)
   pg

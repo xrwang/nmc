@@ -1,10 +1,27 @@
 <h1>Households#show</h1>
 <p>Find me in app/views/households/show.html.erb</p>
 <ul class = "list-unstyled">
-<li><%=@household.long%></li>
-<li><%=@household.lat%></li>
-<li><%=@household.code%></li>
-<li><%=@household.lat%></li>
-<li><%=@household.lat%></li>
+<li><h4>Nickname:</h4> <%=@household.nickname%></li>
+<br>
+<li><h4>Longitude:</h4>  <%=@household.long%></li>
+<br>
+
+<li><h4>Latitude:</h4>  <%=@household.lat%></li>
+<br>
+
+<li><h4>Unique Hash:</h4>  <%=@household.code%></li>
+<br>
+
+<li><h4>Country:</h4>  <%=@household.country%></li>
+<br>
+
+<li><h4>Image:</h4> <%=@household.image%></li>
+<br>
+
+<li><h4>Last updated:</h4>  <%=@household.updated_at%></li>
+<br>
+
+
+
 
 </ul>

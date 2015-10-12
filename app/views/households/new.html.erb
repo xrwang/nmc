@@ -1,0 +1,17 @@
+<h1>Households#new</h1>
+<p>Find me in app/views/households/new.html.erb</p>
+
+<div class="panel-body">
+  <%=simple_form_for @household do |f|%>
+  <%=f.input :long, label: 'longitude', as: :float%>
+
+  <%=f.input :lat, label: 'latitude', as: :float%>
+  <%=f.input :elevation, label: 'elevation in m', as: :float%>
+
+  <%=f.input :nickname, label: 'nickname', as: :string, input_html: {placeholder: "Blue Truck Hasha"}%>
+  <%=f.input :code, label: 'code', as: :string, input_html: {placeholder: "Blue Truck Hasha"}%>
+  <%=f.input :country, label: 'country', :collection => Household::COUNTRY %>
+  <%=f.input :image, label: 'image', input_html: {placeholder: "Image URL"}%>
+  <%= f.submit "Submit".html_safe, class: "btn btn-lg"%>
+  <%end%>
+</div>

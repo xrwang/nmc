@@ -1,4 +1,26 @@
 Rails.application.routes.draw do
+  get 'households/index'
+
+  get 'households/new'
+
+  get 'households/show'
+
+  get 'households/update'
+
+  get 'admin/home'
+
+  devise_for :admins
+  get 'static_pages/index'
+
+  get 'static_pages/home'
+
+  get 'admin' => 'admin#home'
+  root 'static_pages#index'
+
+  resources :households
+
+  post 'households/find', to: 'households#find_household'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

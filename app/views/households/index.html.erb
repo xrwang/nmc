@@ -1,0 +1,8 @@
+<h1>Households#index</h1>
+<p>Find a dataset</p>
+<p>Enter or scan your unique hash</p>
+<%= form_tag households_find_path do %>
+ <%= text_field_tag :code %>
+ <%# f.input :cashed, as: :boolean, checked_value: true, unchecked_value: false %>
+ <%=submit_tag("find", :class => "btn btn-sm btn-primary" ) %>
+<% end %>

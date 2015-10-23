@@ -43,7 +43,7 @@ end
 
   private
   def household_params
-    params.require(:household).permit(:long, :lat, :elevation, :nickname, :code, :country, :image)
+    params.require(:household).permit(:long, :lat, :elevation, :nickname, :code, :country, :image, :pdf_url, :vr_url)
   end
 
   def get_house_via_id

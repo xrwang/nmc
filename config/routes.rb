@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
 
   get 'admin' => 'static_pages#index'
-  root 'static_pages#index'
+  root 'static_pages#home'
 
   resources :households
 

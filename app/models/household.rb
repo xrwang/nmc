@@ -22,29 +22,29 @@ class Household < ActiveRecord::Base
   @households = Household.all
 
 
-  def self.geojson
-  geojson = Hash.new
-  features = []
-  geojson[:type] = "FeatureCollection"
-  geojson[:features] = features
-  @households.each do |household|
-    features << {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [household.long, household.lat]
-      },
-      properties: {
-        name: household.nickname,
-        :'marker-color' => '#00607d',
-        :'marker-symbol' => 'circle',
-        :'marker-size' => 'medium'
-        }
-      }
-  end
-  geojson
-
-end
+#   def self.geojson
+#   geojson = Hash.new
+#   features = []
+#   geojson[:type] = "FeatureCollection"
+#   geojson[:features] = features
+#   @households.each do |household|
+#     features << {
+#       type: "Feature",
+#       geometry: {
+#         type: "Point",
+#         coordinates: [household.long, household.lat]
+#       },
+#       properties: {
+#         name: household.nickname,
+#         :'marker-color' => '#00607d',
+#         :'marker-symbol' => 'circle',
+#         :'marker-size' => 'medium'
+#         }
+#       }
+#   end
+#   geojson
+#
+# end
 
 
 end

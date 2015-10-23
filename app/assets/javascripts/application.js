@@ -16,4 +16,3 @@
 //= require mapbox.js
 //= require turbolinks
 //= require_tree .
-//= require map

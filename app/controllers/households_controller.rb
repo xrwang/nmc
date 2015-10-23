@@ -2,12 +2,12 @@ class HouseholdsController < ApplicationController
 
 def index
 @households = Household.all
-@geojson = Household.geojson
-
-   respond_to do |format|
-    format.html
-    format.json { render json: @geojson }
-   end
+# @geojson = Household.geojson
+#
+#    respond_to do |format|
+#     format.html
+#     format.json { render json: @geojson }
+#    end
 
 
 end

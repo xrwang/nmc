@@ -10,6 +10,9 @@
   <%=f.input :code, label: 'code', as: :string, input_html: {placeholder: "Blue Truck Hasha"}%>
   <%=f.input :country, label: 'country', :collection => Household::COUNTRY %>
   <%=f.input :image, label: 'image', input_html: {placeholder: "Image URL"}%>
+  <%=f.input :vr_url, label: 'spherecast', input_html: {placeholder: "spherecast"}%>
+  <%=f.input :pdf_url, label: 'pdf', input_html: {placeholder: "booklet"}%>
+
   <%= f.submit "Submit".html_safe, class: "btn btn-lg"%>
   <%end%>
 </div>

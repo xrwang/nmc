@@ -334,7 +334,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 #home {
-	background: url("https://s3.amazonaws.com/nomadicmappingcollective/IMG_4067.JPG");
+	// background: url("https://s3.amazonaws.com/nomadicmappingcollective/IMG_4067.JPG");
 	background-color: #222;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -344,6 +344,8 @@ textarea.form-control {
 		 -o-background-size: cover;
 			background-size: cover;
 	padding: 0;
+	color: black !important;
+
 }
 
 // .home-overlay {
@@ -374,6 +376,7 @@ textarea.form-control {
 
 .intro h1{
     font-weight: 800;
+		color: black !important;
 }
 
 .start {

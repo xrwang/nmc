@@ -1,8 +1,9 @@
 <section id="page-top">
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
-<%=@households.each do |household|%>
+<h1>All Data (vieweable from admin)</h1>
+<!-- <p>Find me in app/views/static_pages/index.html.erb</p> -->
+<%@households.each do |household|%>
 <ul class = "list-unstyled">
+  <br><br>
 <li><h4>Nickname:</h4> <%=household.nickname%></li>
 <br>
 <li><h4>Longitude:</h4>  <%=household.long%></li>
